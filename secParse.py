@@ -405,4 +405,10 @@ def search_for_centered_headers(tag):
 
 ## End of Search For CENTERED HEADERS function ## 
 
+## UNCOMMENT TO VIEW 10-K DOCUMENT TEXT
+# filing_documents[document_id]['pages_normalized_text'] 
+
+## UNCOMMENT TO VIEW TABLES 
+# filing_documents[document_id]['table_search']
+
 # print(scrape_table_dictionary(filing_documents[document_id]['table_search']))
