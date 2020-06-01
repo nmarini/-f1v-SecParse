@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 
 #function to decode windows 1252 characters 
 
+## THIS FUNCTION IS FROM THE TUTORIAL AND DID NOT WORK FOR ME, BUT IT DOESN'T SEEM LIKE I NEEDED IT (at least for the example I'm working on)
 def restore_windows_1252_characters(restore_string):
     """
         Replace C1 control characters in the Unicode string s by the
@@ -179,8 +180,8 @@ for document_id in filing_documents:
             # add the repaired html to the list. Also now we have a page number as the key.
             repaired_pages[page_number] = page_soup
 
-            ## display a status to the user
-            # print('Page {} of {} from document {} has had their text normalized.'.format(index + 1, pages_length, document_id))
+            # display a status to the user
+            print('Page {} of {} from document {} has had their text normalized.'.format(index + 1, pages_length, document_id))
             
         # add the normalized text back to the document dictionary
         filing_documents[document_id]['pages_normalized_text'] = normalized_text
@@ -249,7 +250,7 @@ for document_id in filing_documents:
                 
             
             # display a status to the user.
-            # print('Page {} of {} from document {} has been searched.'.format(page_num, page_length, document_id))
+            print('Page {} of {} from document {} has been searched.'.format(page_num, page_length, document_id))
         
         
         # display a status to the user.
@@ -282,7 +283,7 @@ for document_id in filing_documents:
             link_anchor_dict[page_num]= {(anchor_id + 1): anchor for anchor_id, anchor in enumerate(anchors_found)}        
         
             # # display a status to the user.
-            # print('Page {} of {} from document {} contained {} anchors.'.format(page_num, page_length, document_id, num_found))
+            print('Page {} of {} from document {} contained {} anchors.'.format(page_num, page_length, document_id, num_found))
         
         # display a status to the user.  
         print('All the pages from document {} have been scraped for anchors with names.'.format(document_id)) 
@@ -313,8 +314,8 @@ for document_id in filing_documents:
             # each page is going to be checked, so let's have another dictionary that'll house all the tables found.
             tables_dict[page_num] = {(table_id + 1): table for table_id, table in enumerate(tables_found)}        
         
-            # # display a status to the user.
-            # print('Page {} of {} from document {} contained {} tables.'.format(page_num, page_length, document_id, num_found))
+            # display a status to the user.
+            print('Page {} of {} from document {} contained {} tables.'.format(page_num, page_length, document_id, num_found))
         
         # display a status to the user.  
         print('All the pages from document {} have been scraped for tables.'.format(document_id)) 
