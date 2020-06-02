@@ -2,12 +2,31 @@ import re
 import requests
 import unicodedata 
 from bs4 import BeautifulSoup
+from pprint import pprint
+import pickle
 
 #### FOR NEWER FILING DOCUMENTS (~ 2009 and up) - because the HTML format for older filings is less structured ####
 
 #function to decode windows 1252 characters 
 
 ## THIS FUNCTION IS FROM THE TUTORIAL AND DID NOT WORK FOR ME, BUT IT DOESN'T SEEM LIKE I NEEDED IT (at least for the example I'm working on)
+def cache_to_disk(func):
+    def wrapper(*args):
+        cache = '.{}{}.pkl'.format(func.__name__, args).replace('/', '_')
+        try:
+            with open(cache, 'rb') as f:
+                return pickle.load(f)
+        except IOError:
+            result = func(*args)
+            with open(cache, 'wb') as f:
+                pickle.dump(result, f)
+            return result
+
+    return wrapper
+# @cache_to_disk
+def get_link(url):
+    return requests.get(new_html_text).content
+
 def restore_windows_1252_characters(restore_string):
     """
         Replace C1 control characters in the Unicode string s by the
@@ -29,10 +48,11 @@ new_html_text = r"https://www.sec.gov/Archives/edgar/data/915912/000091591220000
 # new_html_text = r"https://www.sec.gov/Archives/edgar/data/1166036/000110465904027382/0001104659-04-027382.txt"
 
 #grab response 
-response = requests.get(new_html_text)
+response = get_link(new_html_text)
 
 #parse the response 
-soup = BeautifulSoup(response.content, 'lxml')
+soup = BeautifulSoup(response, 'lxml')
+
 
 #Define a master dictionary to house all filings 
 master_filings_dict = {}
@@ -118,10 +138,10 @@ for filing_document in soup.find_all('document'):
             # store the document as is, since there are no thematic breaks. In other words, no splitting.
             master_document_dict[document_id]['pages_code'] = [filing_doc_string]
 
-        # display some information to the user.
-        print('-'*80)
-        print('The document {} was parsed.'.format(document_id))
-        print('There was {} thematic breaks(s) found.'.format(len(all_thematic_breaks)))
+        # # display some information to the user.
+        # print('-'*80)
+        # print('The document {} was parsed.'.format(document_id))
+        # print('There was {} thematic breaks(s) found.'.format(len(all_thematic_breaks)))
         
 
 # store the documents in the master_filing_dictionary.
@@ -139,9 +159,9 @@ for document_id in filing_documents:
 
     if document_id == '10-K':
 
-        # display some info to give status updates.
-        print('-'*80)
-        print('Pulling document {} for text normilzation.'.format(document_id))
+        # # display some info to give status updates.
+        # print('-'*80)
+        # print('Pulling document {} for text normilzation.'.format(document_id))
         
         # grab all the pages for that document
         document_pages = filing_documents[document_id]['pages_code']
@@ -159,7 +179,7 @@ for document_id in filing_documents:
         for index, page in enumerate(document_pages):
             
             # pass it through the parser. NOTE I AM USING THE HTML5 PARSER. YOU MUST USE THIS TO FIX BROKEN TAGS.
-            page_soup = BeautifulSoup(page,'html5')
+            page_soup = BeautifulSoup(page,'html5lib')
             
             # grab all the text, notice I go to the BODY tag to do this
             page_text = page_soup.html.body.get_text(' ',strip = True)
@@ -180,8 +200,8 @@ for document_id in filing_documents:
             # add the repaired html to the list. Also now we have a page number as the key.
             repaired_pages[page_number] = page_soup
 
-            # display a status to the user
-            print('Page {} of {} from document {} has had their text normalized.'.format(index + 1, pages_length, document_id))
+            # # display a status to the user
+            # print('Page {} of {} from document {} has had their text normalized.'.format(index + 1, pages_length, document_id))
             
         # add the normalized text back to the document dictionary
         filing_documents[document_id]['pages_normalized_text'] = normalized_text
@@ -195,8 +215,8 @@ for document_id in filing_documents:
         # add the page numbers we have.
         filing_documents[document_id]['pages_numbers_generated'] = gen_page_numbers    
         
-        # display a status to the user.
-        print('All the pages from document {} have been normalized.'.format(document_id))
+        # # display a status to the user.
+        # print('All the pages from document {} have been normalized.'.format(document_id))
 
 
 ## SEARCH WORD SECTION
@@ -249,8 +269,8 @@ for document_id in filing_documents:
                 matching_words_dict[page_num][search_list]['matches'] = matching_words
                 
             
-            # display a status to the user.
-            print('Page {} of {} from document {} has been searched.'.format(page_num, page_length, document_id))
+            # # display a status to the user.
+            # print('Page {} of {} from document {} has been searched.'.format(page_num, page_length, document_id))
         
         
         # display a status to the user.
@@ -283,7 +303,7 @@ for document_id in filing_documents:
             link_anchor_dict[page_num]= {(anchor_id + 1): anchor for anchor_id, anchor in enumerate(anchors_found)}        
         
             # # display a status to the user.
-            print('Page {} of {} from document {} contained {} anchors.'.format(page_num, page_length, document_id, num_found))
+            # print('Page {} of {} from document {} contained {} anchors.'.format(page_num, page_length, document_id, num_found))
         
         # display a status to the user.  
         print('All the pages from document {} have been scraped for anchors with names.'.format(document_id)) 
@@ -314,8 +334,8 @@ for document_id in filing_documents:
             # each page is going to be checked, so let's have another dictionary that'll house all the tables found.
             tables_dict[page_num] = {(table_id + 1): table for table_id, table in enumerate(tables_found)}        
         
-            # display a status to the user.
-            print('Page {} of {} from document {} contained {} tables.'.format(page_num, page_length, document_id, num_found))
+            # # display a status to the user.
+            # print('Page {} of {} from document {} contained {} tables.'.format(page_num, page_length, document_id, num_found))
         
         # display a status to the user.  
         print('All the pages from document {} have been scraped for tables.'.format(document_id)) 
@@ -336,6 +356,59 @@ for document_id in filing_documents:
 
 ## SCRAPING TABLES function ##
 
+# def scrape_table_dictionary(table_dictionary):
+    
+#     # initalize a new dicitonary that'll house all your results
+#     new_table_dictionary = {}
+    
+#     if len(table_dictionary) != 0:
+
+#         # loop through the dictionary
+#         for table_id in table_dictionary:
+
+#             # grab the table
+#             table_html = table_dictionary[table_id]
+            
+#             pprint(table_html)
+#             # grab all the rows.
+#             table_rows = table_html['table'].find_all('tr')
+            
+#             # parse the table, first loop through the rows, then each element, and then parse each element.
+#             parsed_table = [
+#                 [element.get_text(strip=True) for element in row.find_all('td')]
+#                 for row in table_rows
+#             ]
+            
+#             # keep the original just to be safe.
+#             new_table_dictionary[table_id]['original_table'] = table_html
+            
+#             # add the new parsed table.
+#             new_table_dictionary[table_id]['parsed_table'] = parsed_table
+            
+#             # # here some additional steps you can take to clean up the data - Removing '$'.
+#             # parsed_table_cleaned = [
+#             #     [element for element in row if element != '$']
+#             #     for row in parsed_table
+#             # ]
+            
+#             # # here some additional steps you can take to clean up the data - Removing Blanks.
+#             # parsed_table_cleaned = [
+#             #     [element for element in row if element != None]
+#             #     for row in parsed_table_cleaned.
+#             # ]
+         
+#     else:
+        
+#         # if there are no tables then just have the id equal NONE
+#         new_table_dictionary[1]['original_table'] = None
+#         new_table_dictionary[1]['parsed_table'] = None
+        
+#     return new_table_dictionary
+
+
+
+
+
 def scrape_table_dictionary(table_dictionary):
     
     # initalize a new dicitonary that'll house all your results
@@ -349,20 +422,45 @@ def scrape_table_dictionary(table_dictionary):
             # grab the table
             table_html = table_dictionary[table_id]
             
-            # grab all the rows.
-            table_rows = table_html.find_all('tr')
+
+            table_details = []
+            table_text = []
             
-            # parse the table, first loop through the rows, then each element, and then parse each element.
-            parsed_table = [
-                [element.get_text(strip=True) for element in row.find_all('td')]
-                for row in table_rows
-            ]
+            # for table in table_html.values():
+            #     table_rows.append(table.find_all('tr'))
+
+            for table in table_html.values():
+                for row in table.find_all('tr'):
+                    for col in row.find_all('td'):
+                        for td in col: 
+                            table_details.append(td)
+            
+
+            
+            for detail in table_details:
+                # text = detail.replace(u"\u2610", " ")
+                text = unicodedata.normalize('NFKD', detail.get_text()).replace(u"\u2610", " ")
+                if text != ' ' and text != '':
+                    table_text.append(text.encode("utf-8"))
+
+            # for row in table_rows:
+            #     table_details.append(row.td)
+
+            
+            # # parse the table, first loop through the rows, then each element, and then parse each element.
+            # parsed_table = [
+            #     [element.get_text(strip=True) for element in row.find_all('td')]
+            #     for row in table_rows
+            # ]
+
+          
             
             # keep the original just to be safe.
-            new_table_dictionary[table_id]['original_table'] = table_html
+            # new_table_dictionary[table_id]['original_table'] = table_html
             
             # add the new parsed table.
-            new_table_dictionary[table_id]['parsed_table'] = parsed_table
+            # new_table_dictionary[table_id]['parsed_table'][id] = parsed_table
+            new_table_dictionary[table_id] = table_text
             
             # # here some additional steps you can take to clean up the data - Removing '$'.
             # parsed_table_cleaned = [
@@ -379,8 +477,9 @@ def scrape_table_dictionary(table_dictionary):
     else:
         
         # if there are no tables then just have the id equal NONE
-        new_table_dictionary[1]['original_table'] = None
-        new_table_dictionary[1]['parsed_table'] = None
+        # new_table_dictionary[1]['original_table'] = None
+        new_table_dictionary[1] = None
+        
         
     return new_table_dictionary
 
@@ -411,4 +510,4 @@ def search_for_centered_headers(tag):
 ## UNCOMMENT TO VIEW TABLES 
 # filing_documents[document_id]['table_search']
 
-# print(scrape_table_dictionary(filing_documents[document_id]['table_search']))
+print(scrape_table_dictionary(filing_documents['10-K']['table_search']))
