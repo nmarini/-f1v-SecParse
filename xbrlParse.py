@@ -95,7 +95,7 @@ for file in files_list:
                 # definition_loc
 
                 # not sure if I should use both definition_loc and calucation_loc or only one 
-                if element_type_label == 'definition_loc':
+                if element_type_label == 'calculation_loc':
                     
                     # Grab the Old Label ID for example, `lab_us-gaap_AllocatedShareBasedCompensationExpense_E5D37E400FB5193199CFCB477063C5EB`
                     key_store = dict_storage['label']
@@ -124,3 +124,4 @@ for file in files_list:
 
                 # add to dictionary.
                 storage_list.append([file.namespace_label, dict_storage])
+                pprint.pprint(storage_list)
