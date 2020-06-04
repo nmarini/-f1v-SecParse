@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!--XBRL Document Created with Wdesk from Workiva-->
+<!-- -->
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://avalonbay.com/20191231" xmlns:avb="http://avalonbay.com/20191231" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://fasb.org/srt-types/2019-01-31" schemaLocation="http://xbrl.fasb.org/srt/2019/elts/srt-types-2019-01-31.xsd" />
+  <xsd:import namespace="http://fasb.org/srt/2019-01-31" schemaLocation="http://xbrl.fasb.org/srt/2019/elts/srt-2019-01-31.xsd" />
+  <xsd:import namespace="http://fasb.org/us-gaap/2019-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2019/elts/us-gaap-2019-01-31.xsd" />
+  <xsd:import namespace="http://fasb.org/us-roles/2019-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2019/elts/us-roles-2019-01-31.xsd" />
+  <xsd:import namespace="http://fasb.org/us-types/2019-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2019/elts/us-types-2019-01-31.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2009/arcrole/fact-explanatoryFact" schemaLocation="http://www.xbrl.org/lrr/arcrole/factExplanatory-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2009/role/negated" schemaLocation="http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2009/role/net" schemaLocation="http://www.xbrl.org/lrr/role/net-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/dtr/type/numeric" schemaLocation="http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd" />
+  <xsd:import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/country/2017-01-31" schemaLocation="https://xbrl.sec.gov/country/2017/country-2017-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/currency/2019-01-31" schemaLocation="https://xbrl.sec.gov/currency/2019/currency-2019-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/dei/2019-01-31" schemaLocation="https://xbrl.sec.gov/dei/2019/dei-2019-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/exch/2019-01-31" schemaLocation="https://xbrl.sec.gov/exch/2019/exch-2019-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/invest/2013-01-31" schemaLocation="http://xbrl.sec.gov/invest/2013/invest-2013-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/naics/2017-01-31" schemaLocation="http://xbrl.sec.gov/naics/2017/naics-2017-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/sic/2011-01-31" schemaLocation="http://xbrl.sec.gov/sic/2011/sic-2011-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/stpr/2018-01-31" schemaLocation="https://xbrl.sec.gov/stpr/2018/stpr-2018-01-31.xsd" />
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="avb-20191231_cal.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:type="simple" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="avb-20191231_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:type="simple" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="avb-20191231_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:type="simple" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="avb-20191231_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:type="simple" />
+      <link:roleType id="CommitmentsAndContingencies" roleURI="http://avalonbay.com/role/CommitmentsAndContingencies">
+        <link:definition>2108100 - Disclosure - Commitments and Contingencies</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsAndContingenciesCommitmentsAndContingenciesDetails2" roleURI="http://avalonbay.com/role/CommitmentsAndContingenciesCommitmentsAndContingenciesDetails2">
+        <link:definition>2408403 - Disclosure - Commitments and Contingencies Commitments and Contingencies (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsAndContingenciesDetails" roleURI="http://avalonbay.com/role/CommitmentsAndContingenciesDetails">
+        <link:definition>2408402 - Disclosure - Commitments and Contingencies (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsAndContingenciesDetails3" roleURI="http://avalonbay.com/role/CommitmentsAndContingenciesDetails3">
+        <link:definition>2408404 - Disclosure - Commitments and Contingencies (Details 3)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsAndContingenciesTables" roleURI="http://avalonbay.com/role/CommitmentsAndContingenciesTables">
+        <link:definition>2308301 - Disclosure - Commitments and Contingencies (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedBalanceSheets" roleURI="http://avalonbay.com/role/ConsolidatedBalanceSheets">
+        <link:definition>1001000 - Statement - CONSOLIDATED BALANCE SHEETS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedBalanceSheetsParenthetical" roleURI="http://avalonbay.com/role/ConsolidatedBalanceSheetsParenthetical">
+        <link:definition>1001501 - Statement - CONSOLIDATED BALANCE SHEETS (Parenthetical)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfCashFlows" roleURI="http://avalonbay.com/role/ConsolidatedStatementsOfCashFlows">
+        <link:definition>1004000 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfCashFlowsCalc2" roleURI="http://avalonbay.com/role/ConsolidatedStatementsOfCashFlowsCalc2">
+        <link:definition>1004000 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfCashFlowsParenthetical" roleURI="http://avalonbay.com/role/ConsolidatedStatementsOfCashFlowsParenthetical">
+        <link:definition>1004501 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS (Parenthetical)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfComprehensiveIncome" roleURI="http://avalonbay.com/role/ConsolidatedStatementsOfComprehensiveIncome">
+        <link:definition>1002000 - Statement - CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfEquity" roleURI="http://avalonbay.com/role/ConsolidatedStatementsOfEquity">
+        <link:definition>1003000 - Statement - CONSOLIDATED STATEMENTS OF EQUITY</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfEquityParenthetical" roleURI="http://avalonbay.com/role/ConsolidatedStatementsOfEquityParenthetical">
+        <link:definition>1003001 - Statement - CONSOLIDATED STATEMENTS OF EQUITY (Parenthetical)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CoverPage" roleURI="http://avalonbay.com/role/CoverPage">
+        <link:definition>0001000 - Document - Cover Page</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="Equity" roleURI="http://avalonbay.com/role/Equity">
+        <link:definition>2104100 - Disclosure - Equity</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EquityDetails" roleURI="http://avalonbay.com/role/EquityDetails">
+        <link:definition>2404401 - Disclosure - Equity (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValue" roleURI="http://avalonbay.com/role/FairValue">
+        <link:definition>2112100 - Disclosure - Fair Value</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueDetails" roleURI="http://avalonbay.com/role/FairValueDetails">
+        <link:definition>2412402 - Disclosure - Fair Value (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueDetails2" roleURI="http://avalonbay.com/role/FairValueDetails2">
+        <link:definition>2412403 - Disclosure - Fair Value (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueDetails3" roleURI="http://avalonbay.com/role/FairValueDetails3">
+        <link:definition>2412404 - Disclosure - Fair Value (Details 3)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueTables" roleURI="http://avalonbay.com/role/FairValueTables">
+        <link:definition>2312301 - Disclosure - Fair Value (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InterestCapitalized" roleURI="http://avalonbay.com/role/InterestCapitalized">
+        <link:definition>2102100 - Disclosure - Interest Capitalized</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InterestCapitalizedDetails" roleURI="http://avalonbay.com/role/InterestCapitalizedDetails">
+        <link:definition>2402401 - Disclosure - Interest Capitalized (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InvestmentsInRealEstateEntities" roleURI="http://avalonbay.com/role/InvestmentsInRealEstateEntities">
+        <link:definition>2106100 - Disclosure - Investments in Real Estate Entities</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InvestmentsInRealEstateEntitiesDetails" roleURI="http://avalonbay.com/role/InvestmentsInRealEstateEntitiesDetails">
+        <link:definition>2406402 - Disclosure - Investments in Real Estate Entities (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InvestmentsInRealEstateEntitiesDetails2" roleURI="http://avalonbay.com/role/InvestmentsInRealEstateEntitiesDetails2">
+        <link:definition>2406403 - Disclosure - Investments in Real Estate Entities (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InvestmentsInRealEstateEntitiesDetails3" roleURI="http://avalonbay.com/role/InvestmentsInRealEstateEntitiesDetails3">
+        <link:definition>2406404 - Disclosure - Investments in Real Estate Entities (Details 3)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InvestmentsInRealEstateEntitiesDetails4" roleURI="http://avalonbay.com/role/InvestmentsInRealEstateEntitiesDetails4">
+        <link:definition>2406405 - Disclosure - Investments in Real Estate Entities (Details 4)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="InvestmentsInRealEstateEntitiesTables" roleURI="http://avalonbay.com/role/InvestmentsInRealEstateEntitiesTables">
+        <link:definition>2306301 - Disclosure - Investments in Real Estate Entities (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="MortgageNotesPayableUnsecuredNotesAndCreditFacility" roleURI="http://avalonbay.com/role/MortgageNotesPayableUnsecuredNotesAndCreditFacility">
+        <link:definition>2103100 - Disclosure - Mortgage Notes Payable, Unsecured Notes and Credit Facility</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="MortgageNotesPayableUnsecuredNotesAndCreditFacilityDetails" roleURI="http://avalonbay.com/role/MortgageNotesPayableUnsecuredNotesAndCreditFacilityDetails">
+        <link:definition>2403402 - Disclosure - Mortgage Notes Payable, Unsecured Notes and Credit Facility (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="MortgageNotesPayableUnsecuredNotesAndCreditFacilityDetails2" roleURI="http://avalonbay.com/role/MortgageNotesPayableUnsecuredNotesAndCreditFacilityDetails2">
+        <link:definition>2403403 - Disclosure - Mortgage Notes Payable, Unsecured Notes and Credit Facility (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="MortgageNotesPayableUnsecuredNotesAndCreditFacilityDetails3" roleURI="http://avalonbay.com/role/MortgageNotesPayableUnsecuredNotesAndCreditFacilityDetails3">
+        <link:definition>2403404 - Disclosure - Mortgage Notes Payable, Unsecured Notes and Credit Facility (Details 3)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="MortgageNotesPayableUnsecuredNotesAndCreditFacilityDetails4" roleURI="http://avalonbay.com/role/MortgageNotesPayableUnsecuredNotesAndCreditFacilityDetails4">
+        <link:definition>2403405 - Disclosure - Mortgage Notes Payable, Unsecured Notes and Credit Facility (Details 4)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="MortgageNotesPayableUnsecuredNotesAndCreditFacilityTables" roleURI="http://avalonbay.com/role/MortgageNotesPayableUnsecuredNotesAndCreditFacilityTables">
+        <link:definition>2303301 - Disclosure - Mortgage Notes Payable, Unsecured Notes and Credit Facility (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OrganizationBasisOfPresentationAndSignificantAccountingPolicies" roleURI="http://avalonbay.com/role/OrganizationBasisOfPresentationAndSignificantAccountingPolicies">
+        <link:definition>2101100 - Disclosure - Organization, Basis of Presentation, and Significant Accounting Policies</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OrganizationBasisOfPresentationAndSignificantAccountingPoliciesDetails" roleURI="http://avalonbay.com/role/OrganizationBasisOfPresentationAndSignificantAccountingPoliciesDetails">
+        <link:definition>2401403 - Disclosure - Organization, Basis of Presentation, and Significant Accounting Policies (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OrganizationBasisOfPresentationAndSignificantAccountingPoliciesDetails2" roleURI="http://avalonbay.com/role/OrganizationBasisOfPresentationAndSignificantAccountingPoliciesDetails2">
+        <link:definition>2401404 - Disclosure - Organization, Basis of Presentation, and Significant Accounting Policies (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OrganizationBasisOfPresentationAndSignificantAccountingPoliciesDetails3" roleURI="http://avalonbay.com/role/OrganizationBasisOfPresentationAndSignificantAccountingPoliciesDetails3">
+        <link:definition>2401405 - Disclosure - Organization, Basis of Presentation, and Significant Accounting Policies (Details 3)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OrganizationBasisOfPresentationAndSignificantAccountingPoliciesOrganizationBasisOfPresentationAndSignificantAccountingPoliciesDetails4" roleURI="http://avalonbay.com/role/OrganizationBasisOfPresentationAndSignificantAccountingPoliciesOrganizationBasisOfPresentationAndSignificantAccountingPoliciesDetails4">
+        <link:definition>2401406 - Disclosure - Organization, Basis of Presentation, and Significant Accounting Policies Organization, Basis of Presentation, and Significant Accounting Policies (Details 4)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OrganizationBasisOfPresentationAndSignificantAccountingPoliciesPolicies" roleURI="http://avalonbay.com/role/OrganizationBasisOfPresentationAndSignificantAccountingPoliciesPolicies">
+        <link:definition>2201201 - Disclosure - Organization, Basis of Presentation, and Significant Accounting Policies (Policies)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="OrganizationBasisOfPresentationAndSignificantAccountingPoliciesTables" roleURI="http://avalonbay.com/role/OrganizationBasisOfPresentationAndSignificantAccountingPoliciesTables">
+        <link:definition>2301302 - Disclosure - Organization, Basis of Presentation, and Significant Accounting Policies (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="QuarterlyFinancialInformation" roleURI="http://avalonbay.com/role/QuarterlyFinancialInformation">
+        <link:definition>2113100 - Disclosure - Quarterly Financial Information</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="QuarterlyFinancialInformationDetails" roleURI="http://avalonbay.com/role/QuarterlyFinancialInformationDetails">
+        <link:definition>2413402 - Disclosure - Quarterly Financial Information (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="QuarterlyFinancialInformationTables" roleURI="http://avalonbay.com/role/QuarterlyFinancialInformationTables">
+        <link:definition>2313301 - Disclosure - Quarterly Financial Information (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RealEstateAndAccumulatedDepreciation" roleURI="http://avalonbay.com/role/RealEstateAndAccumulatedDepreciation">
+        <link:definition>2115100 - Disclosure - REAL ESTATE AND ACCUMULATED DEPRECIATION</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RealEstateAndAccumulatedDepreciationDetails" roleURI="http://avalonbay.com/role/RealEstateAndAccumulatedDepreciationDetails">
+        <link:definition>2415401 - Disclosure - REAL ESTATE AND ACCUMULATED DEPRECIATION (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RealEstateAndAccumulatedDepreciationDetails2" roleURI="http://avalonbay.com/role/RealEstateAndAccumulatedDepreciationDetails2">
+        <link:definition>2415402 - Disclosure - REAL ESTATE AND ACCUMULATED DEPRECIATION (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RealEstateDispositionActivities" roleURI="http://avalonbay.com/role/RealEstateDispositionActivities">
+        <link:definition>2107100 - Disclosure - Real Estate Disposition Activities</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RealEstateDispositionActivitiesDetails" roleURI="http://avalonbay.com/role/RealEstateDispositionActivitiesDetails">
+        <link:definition>2407402 - Disclosure - Real Estate Disposition Activities (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RealEstateDispositionActivitiesTables" roleURI="http://avalonbay.com/role/RealEstateDispositionActivitiesTables">
+        <link:definition>2307301 - Disclosure - Real Estate Disposition Activities (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RelatedPartyArrangements" roleURI="http://avalonbay.com/role/RelatedPartyArrangements">
+        <link:definition>2111100 - Disclosure - Related Party Arrangements</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RelatedPartyArrangementsDetails" roleURI="http://avalonbay.com/role/RelatedPartyArrangementsDetails">
+        <link:definition>2411401 - Disclosure - Related Party Arrangements (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SegmentReporting" roleURI="http://avalonbay.com/role/SegmentReporting">
+        <link:definition>2109100 - Disclosure - Segment Reporting</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SegmentReportingDetails" roleURI="http://avalonbay.com/role/SegmentReportingDetails">
+        <link:definition>2409402 - Disclosure - Segment Reporting (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SegmentReportingDetails3" roleURI="http://avalonbay.com/role/SegmentReportingDetails3">
+        <link:definition>2409404 - Disclosure - Segment Reporting (Details 3)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SegmentReportingSegmentReportingDetails2" roleURI="http://avalonbay.com/role/SegmentReportingSegmentReportingDetails2">
+        <link:definition>2409403 - Disclosure - Segment Reporting Segment Reporting (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SegmentReportingTables" roleURI="http://avalonbay.com/role/SegmentReportingTables">
+        <link:definition>2309301 - Disclosure - Segment Reporting (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="StockBasedCompensationPlans" roleURI="http://avalonbay.com/role/StockBasedCompensationPlans">
+        <link:definition>2110100 - Disclosure - Stock-Based Compensation Plans</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="StockBasedCompensationPlansDetails" roleURI="http://avalonbay.com/role/StockBasedCompensationPlansDetails">
+        <link:definition>2410402 - Disclosure - Stock-Based Compensation Plans (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="StockBasedCompensationPlansDetails2" roleURI="http://avalonbay.com/role/StockBasedCompensationPlansDetails2">
+        <link:definition>2410403 - Disclosure - Stock-Based Compensation Plans (Details 2)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="StockBasedCompensationPlansDetails3" roleURI="http://avalonbay.com/role/StockBasedCompensationPlansDetails3">
+        <link:definition>2410404 - Disclosure - Stock-Based Compensation Plans (Details 3)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="StockBasedCompensationPlansDetails4" roleURI="http://avalonbay.com/role/StockBasedCompensationPlansDetails4">
+        <link:definition>2410405 - Disclosure - Stock-Based Compensation Plans (Details 4)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="StockBasedCompensationPlansDetails5" roleURI="http://avalonbay.com/role/StockBasedCompensationPlansDetails5">
+        <link:definition>2410406 - Disclosure - Stock-Based Compensation Plans (Details 5)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="StockBasedCompensationPlansDetails6" roleURI="http://avalonbay.com/role/StockBasedCompensationPlansDetails6">
+        <link:definition>2410407 - Disclosure - Stock-Based Compensation Plans (Details 6)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="StockBasedCompensationPlansTables" roleURI="http://avalonbay.com/role/StockBasedCompensationPlansTables">
+        <link:definition>2310301 - Disclosure - Stock-Based Compensation Plans (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SubsequentEvents" roleURI="http://avalonbay.com/role/SubsequentEvents">
+        <link:definition>2114100 - Disclosure - Subsequent Events</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SubsequentEventsDetails" roleURI="http://avalonbay.com/role/SubsequentEventsDetails">
+        <link:definition>2414401 - Disclosure - Subsequent Events (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:element abstract="true" id="avb_A2017AcquisitionsMember" name="A2017AcquisitionsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_A2018AcquisitionsMember" name="A2018AcquisitionsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_A2019DisposalsMember" name="A2019DisposalsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_A850BocaMember" name="A850BocaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_ACJVMember" name="ACJVMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVA55NinthMember" name="AVA55NinthMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVABackBayMember" name="AVABackBayMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVABallardMember" name="AVABallardMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVABallstonMember" name="AVABallstonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVABallstonSquareMember" name="AVABallstonSquareMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVABelltownMember" name="AVABelltownMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVABurbankMember" name="AVABurbankMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVACapitolHillMember" name="AVACapitolHillMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVACortezHillMember" name="AVACortezHillMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVADoBroMember" name="AVADoBroMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVAEsterraParkMember" name="AVAEsterraParkMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVAHStreetMember" name="AVAHStreetMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVAHollywoodMember" name="AVAHollywoodMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVALittleTokyoMember" name="AVALittleTokyoMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVANewportMember" name="AVANewportMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVANoMaMember" name="AVANoMaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVANobHillMember" name="AVANobHillMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVANorthHollywoodMember" name="AVANorthHollywoodMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVANorthPointMember" name="AVANorthPointMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVAPacificBeachMember" name="AVAPacificBeachMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVAPasadenaMember" name="AVAPasadenaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVAQueenAnneMember" name="AVAQueenAnneMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVARiNoMember" name="AVARiNoMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVASomervilleMember" name="AVASomervilleMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVAStamfordMember" name="AVAStamfordMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVAStudioCityIIMember" name="AVAStudioCityIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVAStudioCityIMember" name="AVAStudioCityIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVATheaterDistrictMember" name="AVATheaterDistrictMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVATolucaHillsMember" name="AVATolucaHillsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVAVanNessMember" name="AVAVanNessMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AVAWheatonMember" name="AVAWheatonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AbandonedPursuitCostsAndImpairmentOfLongLivedAssetsAbstract" name="AbandonedPursuitCostsAndImpairmentOfLongLivedAssetsAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AccountingPoliciesLineItems" name="AccountingPoliciesLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AccountingPoliciesTable" name="AccountingPoliciesTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_AdditionalNumberofCommunitiesExpectedToBeDeveloped" name="AdditionalNumberofCommunitiesExpectedToBeDeveloped" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_AnniversaryOfCompletionOfDevelopmentOrRedevelopment" name="AnniversaryOfCompletionOfDevelopmentOrRedevelopment" nillable="true" substitutionGroup="xbrli:item" type="xbrli:durationItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_ArchstoneLexingtonMember" name="ArchstoneLexingtonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_ArchstoneRedmondLakeviewMember" name="ArchstoneRedmondLakeviewMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_ArchstoneToscanoMember" name="ArchstoneToscanoMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AssetsHeldunderFinanceLeasesMember" name="AssetsHeldunderFinanceLeasesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AssetsHeldunderOperatingLeasesMember" name="AssetsHeldunderOperatingLeasesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_AttainmentPercentageOfPhysicalOccupancy" name="AttainmentPercentageOfPhysicalOccupancy" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonActonIIMember" name="AvalonActonIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonActonMember" name="AvalonActonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAlderwoodIIMember" name="AvalonAlderwoodIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAlderwoodIMember" name="AvalonAlderwoodIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAlderwoodMallMember" name="AvalonAlderwoodMallMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonArlingtonNorthMember" name="AvalonArlingtonNorthMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonArundelCrossingMember" name="AvalonArundelCrossingMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtArlingtonSquareMember" name="AvalonAtArlingtonSquareMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtBearCreekMember" name="AvalonAtBearCreekMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtBedfordCenterMember" name="AvalonAtBedfordCenterMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtCahillParkMember" name="AvalonAtCahillParkMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtCenterPlaceMember" name="AvalonAtCenterPlaceMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtFlorhamParkMember" name="AvalonAtFlorhamParkMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtFoxhallMember" name="AvalonAtFoxhallMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtGalleryPlaceMember" name="AvalonAtGalleryPlaceMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtGlenCoveMember" name="AvalonAtGlenCoveMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtGrosvenorStationMember" name="AvalonAtGrosvenorStationMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtLexingtonHillsMember" name="AvalonAtLexingtonHillsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtLexingtonMember" name="AvalonAtLexingtonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtNewtonHighlandsMember" name="AvalonAtNewtonHighlandsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtPrudentialCenterIIMember" name="AvalonAtPrudentialCenterIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtPrudentialCenterIMember" name="AvalonAtPrudentialCenterIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtStratfordMember" name="AvalonAtStratfordMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtThePinehillsMember" name="AvalonAtThePinehillsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonAtTravilleMember" name="AvalonAtTravilleMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBakerRanchMember" name="AvalonBakerRanchMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBayValueAddedFundIILPMember" name="AvalonBayValueAddedFundIILPMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBearHillMember" name="AvalonBearHillMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBellevueMember" name="AvalonBellevueMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBelltownTowersMember" name="AvalonBelltownTowersMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBerkeleyMember" name="AvalonBerkeleyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBloomfieldStationMember" name="AvalonBloomfieldStationMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBloomingdaleMember" name="AvalonBloomingdaleMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBonterraMember" name="AvalonBonterraMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBoontonMember" name="AvalonBoontonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBreaPlaceMember" name="AvalonBreaPlaceMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBronxvilleMember" name="AvalonBronxvilleMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBrooklynBayMember" name="AvalonBrooklynBayMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBurbankMember" name="AvalonBurbankMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonBurlingtonMember" name="AvalonBurlingtonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonCalabasasMember" name="AvalonCalabasasMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonCamarilloMember" name="AvalonCamarilloMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonCampbellMember" name="AvalonCampbellMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonCerritosMember" name="AvalonCerritosMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonChinoHillsMember" name="AvalonChinoHillsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonClarendonMember" name="AvalonClarendonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonClintonNorthMember" name="AvalonClintonNorthMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonClintonSouthMember" name="AvalonClintonSouthMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonCohassetMember" name="AvalonCohassetMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonColumbiaPikeMember" name="AvalonColumbiaPikeMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonCommonsMember" name="AvalonCommonsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonCourthousePlaceMember" name="AvalonCourthousePlaceMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonCoveMember" name="AvalonCoveMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonDarienMember" name="AvalonDarienMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonDelMarStationMember" name="AvalonDelMarStationMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonDenverWestMember" name="AvalonDenverWestMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonDogpatchMember" name="AvalonDogpatchMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonDoralMember" name="AvalonDoralMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonDublinStationIIMember" name="AvalonDublinStationIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonDublinStationMember" name="AvalonDublinStationMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonDunnLoringMember" name="AvalonDunnLoringMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonEastHarborMember" name="AvalonEastHarborMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonEastNorwalkMember" name="AvalonEastNorwalkMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonEastonMember" name="AvalonEastonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonEncinoMember" name="AvalonEncinoMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonEsterraParkMember" name="AvalonEsterraParkMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonExeterMember" name="AvalonExeterMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonFallsChurchMember" name="AvalonFallsChurchMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonFirstandMMember" name="AvalonFirstandMMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonFortGreeneMember" name="AvalonFortGreeneMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonFoundryRowMember" name="AvalonFoundryRowMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonFraminghamMember" name="AvalonFraminghamMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonFremontMember" name="AvalonFremontMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonGardenCityMember" name="AvalonGardenCityMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonGlenCoveNorthMember" name="AvalonGlenCoveNorthMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonGlendaleMember" name="AvalonGlendaleMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonGlendoraMember" name="AvalonGlendoraMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonGreatNeckMember" name="AvalonGreatNeckMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonGreenIIIMember" name="AvalonGreenIIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonGreenIIMember" name="AvalonGreenIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonGreenIMember" name="AvalonGreenIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonHackensackAtRiversideMember" name="AvalonHackensackAtRiversideMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonHarrisonMember" name="AvalonHarrisonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonHayesValleyMember" name="AvalonHayesValleyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonHobokenMember" name="AvalonHobokenMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonHuntValleyMember" name="AvalonHuntValleyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonHuntingtonBeachMember" name="AvalonHuntingtonBeachMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonHuntingtonStationMember" name="AvalonHuntingtonStationMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonIrvineIIIMember" name="AvalonIrvineIIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonIrvineIIMember" name="AvalonIrvineIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonIrvineIMember" name="AvalonIrvineIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonKirklandatCarillonMember" name="AvalonKirklandatCarillonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonLaJollaColonyMember" name="AvalonLaJollaColonyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonLaurelMember" name="AvalonLaurelMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMamaroneckMember" name="AvalonMamaroneckMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMaplewoodMember" name="AvalonMaplewoodMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMarinaBayMember" name="AvalonMarinaBayMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMarlboroughIIMember" name="AvalonMarlboroughIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMarlboroughMember" name="AvalonMarlboroughMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMeadowsatCastleRockMember" name="AvalonMeadowsatCastleRockMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMelvilleMember" name="AvalonMelvilleMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMeydenbauerMember" name="AvalonMeydenbauerMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMidtownWestMember" name="AvalonMidtownWestMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMissionOaksMember" name="AvalonMissionOaksMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMonroviaMember" name="AvalonMonroviaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMorningsideParkMember" name="AvalonMorningsideParkMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMorrisonParkMember" name="AvalonMorrisonParkMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMosaicMember" name="AvalonMosaicMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonMountainViewMember" name="AvalonMountainViewMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonNatickMember" name="AvalonNatickMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonNewCanaanMember" name="AvalonNewCanaanMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonNewcastleCommonsIIMember" name="AvalonNewcastleCommonsIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonNewcastleCommonsIMember" name="AvalonNewcastleCommonsIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonNorthBergenMember" name="AvalonNorthBergenMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonNorthCreekMember" name="AvalonNorthCreekMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonNorthStationMember" name="AvalonNorthStationMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonNorthboroughMember" name="AvalonNorthboroughMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonNorwalkMember" name="AvalonNorwalkMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonNorwoodMember" name="AvalonNorwoodMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonOakCreekMember" name="AvalonOakCreekMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonOaksMember" name="AvalonOaksMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonOaksWestMember" name="AvalonOaksWestMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonOceanAvenueMember" name="AvalonOceanAvenueMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonOldBridgeMember" name="AvalonOldBridgeMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonOnTheAlamedaMember" name="AvalonOnTheAlamedaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonOrchardsMember" name="AvalonOrchardsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonOssiningMember" name="AvalonOssiningMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonParcSquareMember" name="AvalonParcSquareMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonParkCrestMember" name="AvalonParkCrestMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonPasadenaMember" name="AvalonPasadenaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonPiscatawayMember" name="AvalonPiscatawayMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonPlayaVistaMember" name="AvalonPlayaVistaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonPotomacYardMember" name="AvalonPotomacYardMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonPrincetonJunctionMember" name="AvalonPrincetonJunctionMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonPrincetonMember" name="AvalonPrincetonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonPublicMarketMember" name="AvalonPublicMarketMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonQuincyMember" name="AvalonQuincyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonRedRocksMember" name="AvalonRedRocksMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonRedmondPlaceMember" name="AvalonRedmondPlaceMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonRestonLandingMember" name="AvalonRestonLandingMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonRiverviewMember" name="AvalonRiverviewMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonRiverviewNorthMember" name="AvalonRiverviewNorthMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonRockMeadowMember" name="AvalonRockMeadowMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonRockvilleCentreIIMember" name="AvalonRockvilleCentreIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonRockvilleCentreIMember" name="AvalonRockvilleCentreIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonRoselandMember" name="AvalonRoselandMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonRussettMember" name="AvalonRussettMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSanBrunoIIIMember" name="AvalonSanBrunoIIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSanBrunoIIMember" name="AvalonSanBrunoIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSanBrunoIMember" name="AvalonSanBrunoIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSanDimasMember" name="AvalonSanDimasMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSantaMonicaOnMainMember" name="AvalonSantaMonicaOnMainMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSaugusMember" name="AvalonSaugusMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSharonMember" name="AvalonSharonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSheltonMember" name="AvalonSheltonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSiliconValleyMember" name="AvalonSiliconValleyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSimiValleyMember" name="AvalonSimiValleyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSomersMember" name="AvalonSomersMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSomersetMember" name="AvalonSomersetMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSouthlandsMember" name="AvalonSouthlandsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonStudioCityMember" name="AvalonStudioCityMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSudburyMember" name="AvalonSudburyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonSunsetTowersMember" name="AvalonSunsetTowersMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonTeaneckMember" name="AvalonTeaneckMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonTheAlbemarleMember" name="AvalonTheAlbemarleMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonThousandOaksPlazaMember" name="AvalonThousandOaksPlazaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonTintonFallsMember" name="AvalonTintonFallsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonToscanaMember" name="AvalonToscanaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonTowersBellevueMember" name="AvalonTowersBellevueMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonTowersMember" name="AvalonTowersMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonTowersOnThePeninsulaMember" name="AvalonTowersOnThePeninsulaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonTowsonMember" name="AvalonTowsonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonTysonsCornerMember" name="AvalonTysonsCornerMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonUnionCityMember" name="AvalonUnionCityMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonUnionMember" name="AvalonUnionMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonVistaMember" name="AvalonVistaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWalnutCreekIIMember" name="AvalonWalnutCreekIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWalnutCreekMember" name="AvalonWalnutCreekMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWalnutRidgeIIMember" name="AvalonWalnutRidgeIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWalnutRidgeIMember" name="AvalonWalnutRidgeIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWarnerPlaceMember" name="AvalonWarnerPlaceMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWestHollywoodMember" name="AvalonWestHollywoodMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWestLongBranchMember" name="AvalonWestLongBranchMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWestburyMember" name="AvalonWestburyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWhartonMember" name="AvalonWhartonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWhitePlainsMember" name="AvalonWhitePlainsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWilloughbySquareMember" name="AvalonWilloughbySquareMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWillowGlenMember" name="AvalonWillowGlenMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWilshireMember" name="AvalonWilshireMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWiltononDanburyRdMember" name="AvalonWiltononDanburyRdMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWiltononRiverRdMember" name="AvalonWiltononRiverRdMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWoburnMember" name="AvalonWoburnMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWoodlandHillsMember" name="AvalonWoodlandHillsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonWoodlandParkMember" name="AvalonWoodlandParkMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonYonkersMember" name="AvalonYonkersMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonatAssemblyRowMember" name="AvalonatAssemblyRowMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonatAssemblyRowandAVASomervilleMember" name="AvalonatAssemblyRowandAVASomervilleMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonatChestnutHillMember" name="AvalonatChestnutHillMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonatEdgewaterIIMember" name="AvalonatEdgewaterIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonatEdgewaterIMember" name="AvalonatEdgewaterIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonatFairwayHillsMeadowsMember" name="AvalonatFairwayHillsMeadowsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonatFairwayHillsWoodsMember" name="AvalonatFairwayHillsWoodsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonatMissionBayIIIMember" name="AvalonatMissionBayIIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonatMissionBayIMember" name="AvalonatMissionBayIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonatWesmontStationIIMember" name="AvalonatWesmontStationIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonatWesmontStationIMember" name="AvalonatWesmontStationIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonattheHinghamShipyardIIMember" name="AvalonattheHinghamShipyardIIMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_AvalonattheHinghamShipyardMember" name="AvalonattheHinghamShipyardMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_BostonMAMember" name="BostonMAMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_BusinessCombinationAcquisitionRelatedCostsAbandonedPursuitCosts" name="BusinessCombinationAcquisitionRelatedCostsAbandonedPursuitCosts" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="avb_CapitalGainTaxRate" name="CapitalGainTaxRate" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_CasualtyGainAndImpairmentLossNetOperatingActivities" name="CasualtyGainAndImpairmentLossNetOperatingActivities" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_CommitmentsAndContingenciesDisclosureLineItems" name="CommitmentsAndContingenciesDisclosureLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_CommitmentsAndContingenciesDisclosureTable" name="CommitmentsAndContingenciesDisclosureTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_CommonStockDividendsLongTermCapitalGainPercentage" name="CommonStockDividendsLongTermCapitalGainPercentage" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_CommonStockDividendsOrdinaryTaxableDistributionPercentage" name="CommonStockDividendsOrdinaryTaxableDistributionPercentage" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_CommonStockDividendsUnrecapturedSection1250GainPercentage" name="CommonStockDividendsUnrecapturedSection1250GainPercentage" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_CommonStockValueAuthorizedUnderContinuousEquityProgram" name="CommonStockValueAuthorizedUnderContinuousEquityProgram" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="avb_CommonStockValueRemainingToBeAuthorizedUnderContinuousEquityProgram" name="CommonStockValueRemainingToBeAuthorizedUnderContinuousEquityProgram" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="avb_ContinuousEquityProgramCEPIVMember" name="ContinuousEquityProgramCEPIVMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_ContinuousEquityProgramCEPVMember" name="ContinuousEquityProgramCEPVMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_ContinuousEquityProgramsCEPIVandCEPVMember" name="ContinuousEquityProgramsCEPIVandCEPVMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_CorporateOverheadMember" name="CorporateOverheadMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_CurrentCommunitiesMember" name="CurrentCommunitiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_DerivativeNotionalAmountsEnteredIntoDuringPeriod" name="DerivativeNotionalAmountsEnteredIntoDuringPeriod" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="avb_DerivativeNotionalAmountsSettledDuringPeriod" name="DerivativeNotionalAmountsSettledDuringPeriod" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="avb_DerivativeWeightedAverageInterestRate" name="DerivativeWeightedAverageInterestRate" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="avb_DevelopmentCommunitiesMember" name="DevelopmentCommunitiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_DevelopmentRedevelopmentCommunitiesMember" name="DevelopmentRedevelopmentCommunitiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_DevelopmentRedevelopmentMember" name="DevelopmentRedevelopmentMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_DisposalGroupNotDiscontinuedOperationNetOperatingIncomeFromAssetsHeldForSaleNotClassifiedAsDiscontinuedOperations" name="DisposalGroupNotDiscontinuedOperationNetOperatingIncomeFromAssetsHeldForSaleNotClassifiedAsDiscontinuedOperations" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_DisposalsMember" name="DisposalsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_DividendsDeclaredButNotYetPaid" name="DividendsDeclaredButNotYetPaid" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="avb_DownRealEstateInvestmentTrustUnitsFairValue" name="DownRealEstateInvestmentTrustUnitsFairValue" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="avb_DueToOfficersOrStockholdersCurrentAndNoncurrentInQuarterlyInstallments" name="DueToOfficersOrStockholdersCurrentAndNoncurrentInQuarterlyInstallments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="avb_EavesBurlingtonMember" name="EavesBurlingtonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesCerritosMember" name="EavesCerritosMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesColumbiaTownCenterMember" name="EavesColumbiaTownCenterMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesCreeksideMember" name="EavesCreeksideMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesDalyCityMember" name="EavesDalyCityMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesDiamondHeightsMember" name="EavesDiamondHeightsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesDublinMember" name="EavesDublinMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesFairLakesMember" name="EavesFairLakesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesFairfaxCityMember" name="EavesFairfaxCityMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesFairfaxTowersMember" name="EavesFairfaxTowersMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesFosterCityMember" name="EavesFosterCityMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesFremontMember" name="EavesFremontMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesGloverParkMember" name="EavesGloverParkMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesHuntingtonBeachMember" name="EavesHuntingtonBeachMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesLaMesaMember" name="EavesLaMesaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesLakeForestMember" name="EavesLakeForestMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesLawrencevilleMember" name="EavesLawrencevilleMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesLosFelizMember" name="EavesLosFelizMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesMissionRidgeMember" name="EavesMissionRidgeMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesMissionViejoMember" name="EavesMissionViejoMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesMountainViewAtMiddlefieldMember" name="EavesMountainViewAtMiddlefieldMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesOldTownPasadenaMember" name="EavesOldTownPasadenaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesPacificaMember" name="EavesPacificaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesPeabodyMember" name="EavesPeabodyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesPhillipsRanchMember" name="EavesPhillipsRanchMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesPleasantonMember" name="EavesPleasantonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesQuincyMember" name="EavesQuincyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesRanchoPenasquitosMember" name="EavesRanchoPenasquitosMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesRedmondCampusMember" name="EavesRedmondCampusMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesSanDimasCanyonMember" name="EavesSanDimasCanyonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesSanDimasMember" name="EavesSanDimasMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesSanJoseMember" name="EavesSanJoseMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesSanMarcosMember" name="EavesSanMarcosMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesSanRafaelMember" name="EavesSanRafaelMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesSantaMargaritaMember" name="EavesSantaMargaritaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesSealBeachMember" name="EavesSealBeachMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesSouthCoastMember" name="EavesSouthCoastMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesStamfordMember" name="EavesStamfordMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesSunnyvaleMember" name="EavesSunnyvaleMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesThousandOaksMember" name="EavesThousandOaksMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesTunlawGardensMember" name="EavesTunlawGardensMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesTysonsCornerMember" name="EavesTysonsCornerMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesUnionCityMember" name="EavesUnionCityMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesWalnutCreekMember" name="EavesWalnutCreekMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesWarnerCenterMember" name="EavesWarnerCenterMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesWashingtonianCenterMember" name="EavesWashingtonianCenterMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesWestValleyMember" name="EavesWestValleyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EavesWoodlandHillsMember" name="EavesWoodlandHillsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EmployeeAndDirectorsStockOptionsMember" name="EmployeeAndDirectorsStockOptionsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EmployeeStockPurchasePlanAbstract" name="EmployeeStockPurchasePlanAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EmploymentAgreementsAndArrangementsAbstract" name="EmploymentAgreementsAndArrangementsAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_EquityMethodInvestmentNetIncomeLossPortionAttributableToParent" name="EquityMethodInvestmentNetIncomeLossPortionAttributableToParent" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="avb_EquityMethodInvestmentSummarizedFinancialInformationAssetsOtherAssets" name="EquityMethodInvestmentSummarizedFinancialInformationAssetsOtherAssets" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="avb_EquityMethodInvestmentSummarizedFinancialInformationDepreciationAndAmortization" name="EquityMethodInvestmentSummarizedFinancialInformationDepreciationAndAmortization" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="avb_EquityMethodInvestmentSummarizedFinancialInformationInterestExpense" name="EquityMethodInvestmentSummarizedFinancialInformationInterestExpense" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="avb_EquityMethodInvestmentSummarizedFinancialInformationLiabilitiesOtherLiabilities" name="EquityMethodInvestmentSummarizedFinancialInformationLiabilitiesOtherLiabilities" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="avb_EquityMethodInvestmentSummarizedFinancialInformationMortgageNotesPayableAndCreditFacility" name="EquityMethodInvestmentSummarizedFinancialInformationMortgageNotesPayableAndCreditFacility" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="avb_EquityMethodInvestmentSummarizedFinancialInformationOperatingAndOtherExpenses" name="EquityMethodInvestmentSummarizedFinancialInformationOperatingAndOtherExpenses" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="avb_EquityMethodInvestmentSummarizedFinancialInformationRealEstateNet" name="EquityMethodInvestmentSummarizedFinancialInformationRealEstateNet" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="avb_EquityMethodInvestmentsAmortizationOfExcessInvestmentAndOther" name="EquityMethodInvestmentsAmortizationOfExcessInvestmentAndOther" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_EstablishedCommunitiesMember" name="EstablishedCommunitiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_EstimatedNumberOfApartmentHomesInCommunitiesExpectedToBeDeveloped" name="EstimatedNumberOfApartmentHomesInCommunitiesExpectedToBeDeveloped" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_ExciseTaxRefund" name="ExciseTaxRefund" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="avb_ExecutiveVicePresidentsMember" name="ExecutiveVicePresidentsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_ExercisePriceRangefromDollars110to119Member" name="ExercisePriceRangefromDollars110to119Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_ExercisePriceRangefromDollars130to139Member" name="ExercisePriceRangefromDollars130to139Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_ExercisePriceRangefromDollars70to79Member" name="ExercisePriceRangefromDollars70to79Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ExpectedAggregateNumberOfApartmentHomesToBeConstructed" name="ExpectedAggregateNumberOfApartmentHomesToBeConstructed" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="avb_FairfieldCTMember" name="FairfieldCTMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_FixedRateMortgageNotesPayableMember" name="FixedRateMortgageNotesPayableMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_FloatingRateUnsecuredNotes300MillionMember" name="FloatingRateUnsecuredNotes300MillionMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_ForSaleCondominiumInventoryMember" name="ForSaleCondominiumInventoryMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_FormerDevelopmentRightMember" name="FormerDevelopmentRightMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ForwardContractIndexedToIssuersEquityNetProceeds" name="ForwardContractIndexedToIssuersEquityNetProceeds" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="avb_GainOnSaleOfRealEstateAssetsInContinuingOperations" name="GainOnSaleOfRealEstateAssetsInContinuingOperations" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_ImprovementsUpgradesFurnitureFixturesAndEquipmentMember" name="ImprovementsUpgradesFurnitureFixturesAndEquipmentMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_IncomeLossFromEquityMethodInvestmentsDueToRecognitionOfPromotedInterest" name="IncomeLossFromEquityMethodInvestmentsDueToRecognitionOfPromotedInterest" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="avb_IndirectOperatingExpensesNetOfCorporateIncome" name="IndirectOperatingExpensesNetOfCorporateIncome" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_InterestCapitalizedDisclosureAbstract" name="InterestCapitalizedDisclosureAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_InterestCapitalizedDisclosureTextBlock" name="InterestCapitalizedDisclosureTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_JointVenturePartnerMember" name="JointVenturePartnerMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_LandHeldforDevelopmentMember" name="LandHeldforDevelopmentMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_LeadIndependentDirectorMember" name="LeadIndependentDirectorMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_LeaseLiability" name="LeaseLiability" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="avb_LeaseLiabilityPaymentsDue" name="LeaseLiabilityPaymentsDue" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="avb_LeaseLiabilityPaymentsDueAfterYearFive" name="LeaseLiabilityPaymentsDueAfterYearFive" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="avb_LeaseLiabilityPaymentsDueYearFive" name="LeaseLiabilityPaymentsDueYearFive" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="avb_LeaseLiabilityPaymentsDueYearFour" name="LeaseLiabilityPaymentsDueYearFour" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="avb_LeaseLiabilityPaymentsDueYearThree" name="LeaseLiabilityPaymentsDueYearThree" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="avb_LeaseLiabilityPaymentsDueYearTwo" name="LeaseLiabilityPaymentsDueYearTwo" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="avb_LeaseLiabilityPaymentsRemainderOfFiscalYear" name="LeaseLiabilityPaymentsRemainderOfFiscalYear" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="avb_LeaseLiabilityUndiscountedExcessAmount" name="LeaseLiabilityUndiscountedExcessAmount" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="avb_LeaseObligationsAbstract" name="LeaseObligationsAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_LeaseRightOfUseAsset" name="LeaseRightOfUseAsset" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="avb_LeaseUpCommunitiesMember" name="LeaseUpCommunitiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_LeaseWeightedAverageRemainingLeaseTermandDiscountRateTableTextBlock" name="LeaseWeightedAverageRemainingLeaseTermandDiscountRateTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_LegacyJVMember" name="LegacyJVMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_LosAngelesCAMember" name="LosAngelesCAMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_ManagementDevelopmentAndOtherMember" name="ManagementDevelopmentAndOtherMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_MemorialHeightsVillagesMember" name="MemorialHeightsVillagesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_MetroNYNJMember" name="MetroNYNJMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_MidAtlanticMember" name="MidAtlanticMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_MinimumPercentageOfDistributionOfAdjustedTaxableIncomeForDeductingDividendsFromFederallyTaxableIncome" name="MinimumPercentageOfDistributionOfAdjustedTaxableIncomeForDeductingDividendsFromFederallyTaxableIncome" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_MinimumPercentageOfDistributionOfREITTaxableIncomeForFederalIncomeTaxExemption" name="MinimumPercentageOfDistributionOfREITTaxableIncomeForFederalIncomeTaxExemption" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NYCJVMember" name="NYCJVMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NewEnglandMember" name="NewEnglandMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NewJerseyMember" name="NewJerseyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NewYorkCityNYMember" name="NewYorkCityNYMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NewYorkSuburbanMember" name="NewYorkSuburbanMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NonEmployeeDirectorMember" name="NonEmployeeDirectorMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NonEmployeeDirectorServingAsAChairpersonoftheAuditCommitteeMember" name="NonEmployeeDirectorServingAsAChairpersonoftheAuditCommitteeMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NonEmployeeDirectorServingAsAChairpersonoftheCompensationCommitteeMember" name="NonEmployeeDirectorServingAsAChairpersonoftheCompensationCommitteeMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NonEmployeeDirectorServingAsAChairpersonoftheNominatingandCorporateGovernanceorInvestmentandFinanceCommitteesMember" name="NonEmployeeDirectorServingAsAChairpersonoftheNominatingandCorporateGovernanceorInvestmentandFinanceCommitteesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NonQualifiedEmployeeStockPurchasePlanMember" name="NonQualifiedEmployeeStockPurchasePlanMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NorthernCaliforniaMember" name="NorthernCaliforniaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayable2.850Maturities2023Member" name="NotesPayable2.850Maturities2023Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayable2.900Maturities2026Member" name="NotesPayable2.900Maturities2026Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayable2.950Maturities2026Member" name="NotesPayable2.950Maturities2026Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayable3.450Maturities2025Member" name="NotesPayable3.450Maturities2025Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayable3.500Maturities2025Member" name="NotesPayable3.500Maturities2025Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayable3.625Maturities2020Member" name="NotesPayable3.625Maturities2020Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayable3.625Maturities2020and2021Member" name="NotesPayable3.625Maturities2020and2021Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayable4.200Maturities2023Member" name="NotesPayable4.200Maturities2023Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2019FixedRateMember" name="NotesPayableMaturities2019FixedRateMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2019Member" name="NotesPayableMaturities2019Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2019VariableRateMember" name="NotesPayableMaturities2019VariableRateMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2020Member" name="NotesPayableMaturities2020Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2021Member" name="NotesPayableMaturities2021Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2022Member" name="NotesPayableMaturities2022Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2023Member" name="NotesPayableMaturities2023Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2024Member" name="NotesPayableMaturities2024Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2025Member" name="NotesPayableMaturities2025Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2026Member" name="NotesPayableMaturities2026Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2027Member" name="NotesPayableMaturities2027Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2028Member" name="NotesPayableMaturities2028Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2029Member" name="NotesPayableMaturities2029Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2046Member" name="NotesPayableMaturities2046Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2047Member" name="NotesPayableMaturities2047Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturities2048Member" name="NotesPayableMaturities2048Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_NotesPayableMaturitiesThereafterMember" name="NotesPayableMaturitiesThereafterMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_NumberOfApartmentCommunitiesSold" name="NumberOfApartmentCommunitiesSold" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_NumberOfApartmentHomesAcquired" name="NumberOfApartmentHomesAcquired" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_NumberOfApartmentHomesHeldForSale" name="NumberOfApartmentHomesHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_NumberOfApartmentHomesInCommunitiesOwned" name="NumberOfApartmentHomesInCommunitiesOwned" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_NumberOfApartmentHomesSold" name="NumberOfApartmentHomesSold" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_NumberOfApartmentHomesUnderReconstruction" name="NumberOfApartmentHomesUnderReconstruction" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_NumberOfBoatSlipsSold" name="NumberOfBoatSlipsSold" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_NumberOfCommercialPropertiesOwned" name="NumberOfCommercialPropertiesOwned" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_NumberOfCommunitiesAcquired" name="NumberOfCommunitiesAcquired" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_NumberOfCommunitiesHeldForSale" name="NumberOfCommunitiesHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_NumberOfCommunitiesSoldWithDeferredTaxObligations" name="NumberOfCommunitiesSoldWithDeferredTaxObligations" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_NumberOfCommunitiesWithApartmentsUnderReconstruction" name="NumberOfCommunitiesWithApartmentsUnderReconstruction" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_NumberOfFinanceLeasesForParkingGarageAdjacentToDevelopmentCommunity" name="NumberOfFinanceLeasesForParkingGarageAdjacentToDevelopmentCommunity" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_NumberOfFinanceLeasesForParkingGarageAdjacentToOperatingCommunity" name="NumberOfFinanceLeasesForParkingGarageAdjacentToOperatingCommunity" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_NumberOfFinanceLeasesForParkingGaragesAdjacentToCommunities" name="NumberOfFinanceLeasesForParkingGaragesAdjacentToCommunities" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_NumberOfLandParcelsSold" name="NumberOfLandParcelsSold" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_NumberOfLeasedPropertiesUnderPurchaseOptions" name="NumberOfLeasedPropertiesUnderPurchaseOptions" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_NumberOfOfficeLeases" name="NumberOfOfficeLeases" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_NumberOfOperatingApartmentCommunitiesOwned" name="NumberOfOperatingApartmentCommunitiesOwned" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_NumberOfOperatingApartmentCommunitiesUnderConstruction" name="NumberOfOperatingApartmentCommunitiesUnderConstruction" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_NumberOfOwnedCommunitiesUnderConstruction" name="NumberOfOwnedCommunitiesUnderConstruction" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_NumberOfResidentialCondominiumUnits" name="NumberOfResidentialCondominiumUnits" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_NumberOfVenturesInWhichEntityIsRequiredToPurchaseInterestInInvestmentAtGuaranteedMinimumAmount" name="NumberOfVenturesInWhichEntityIsRequiredToPurchaseInterestInInvestmentAtGuaranteedMinimumAmount" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_NumberofResidentialCondominiumUnitsSold" name="NumberofResidentialCondominiumUnitsSold" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_NumberofResidentialCondominiumUnitsUnderContract" name="NumberofResidentialCondominiumUnitsUnderContract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_OaklandEastBayCAMember" name="OaklandEastBayCAMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_OakwoodArlingtonMember" name="OakwoodArlingtonMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_OfficerSeveranceProgramMember" name="OfficerSeveranceProgramMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_OperatingExpensesFromAssetsHeldForSaleNotClassifiedAsDiscontinuedOperations" name="OperatingExpensesFromAssetsHeldForSaleNotClassifiedAsDiscontinuedOperations" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_OrangeCountyCAMember" name="OrangeCountyCAMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_OtherLetterofCreditMember" name="OtherLetterofCreditMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_OtherRealEstateSalesMember" name="OtherRealEstateSalesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_OtherStabilizedCommunitiesMember" name="OtherStabilizedCommunitiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_PacificNorthwestMember" name="PacificNorthwestMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_PaymentForRedemptionOfPreferredInterestObligation" name="PaymentForRedemptionOfPreferredInterestObligation" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="avb_PercentOfCreditFacilityAvailableToCompetitiveBidOption" name="PercentOfCreditFacilityAvailableToCompetitiveBidOption" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_PercentageOfRightOfDistribution" name="PercentageOfRightOfDistribution" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_PercentageofRightofRemainingDistribution" name="PercentageofRightofRemainingDistribution" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="avb_PorticoatSilverSpringMetroMember" name="PorticoatSilverSpringMetroMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_PreferredInterestObligationLiquidationValue" name="PreferredInterestObligationLiquidationValue" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="avb_PropertiesOnLandSubjectToLandLeasesMember" name="PropertiesOnLandSubjectToLandLeasesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_RealEstateAcquisitionsConstructionCostsAndImprovements" name="RealEstateAcquisitionsConstructionCostsAndImprovements" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="avb_RealEstateAndAccumulatedDepreciationCarryingAmountOfLandAndBuildingsAndImprovementsNet" name="RealEstateAndAccumulatedDepreciationCarryingAmountOfLandAndBuildingsAndImprovementsNet" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="avb_RealEstateCapitalizedAdditions" name="RealEstateCapitalizedAdditions" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="avb_RealEstateDispositionsIncludingImpairmentLossOnPlannedDispositions" name="RealEstateDispositionsIncludingImpairmentLossOnPlannedDispositions" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="avb_RealEstateGrossAtCarryingValueExcludingGrossRealEstateAssetsHeldForSale" name="RealEstateGrossAtCarryingValueExcludingGrossRealEstateAssetsHeldForSale" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="avb_RealEstateHeldForSaleGross" name="RealEstateHeldForSaleGross" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="avb_RealEstateInvestmentsProjectedTotalCapitalizedCost" name="RealEstateInvestmentsProjectedTotalCapitalizedCost" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="avb_ReconciliationOfIncomeFromBookBasisToTaxBasisAdjustmentAbstract" name="ReconciliationOfIncomeFromBookBasisToTaxBasisAdjustmentAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ReconciliationOfIncomeFromBookBasisToTaxBasisCompensationExpense" name="ReconciliationOfIncomeFromBookBasisToTaxBasisCompensationExpense" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="avb_ReconciliationOfIncomeFromBookBasisToTaxBasisDepreciationAndAmortization" name="ReconciliationOfIncomeFromBookBasisToTaxBasisDepreciationAndAmortization" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="avb_ReconciliationOfIncomeFromBookBasisToTaxBasisGainOnSaleOfCommunities" name="ReconciliationOfIncomeFromBookBasisToTaxBasisGainOnSaleOfCommunities" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="avb_ReconciliationOfIncomeFromBookBasisToTaxBasisMarkToMarketInterest" name="ReconciliationOfIncomeFromBookBasisToTaxBasisMarkToMarketInterest" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="avb_ReconciliationOfIncomeFromBookBasisToTaxBasisNetIncomeLossTaxBasis" name="ReconciliationOfIncomeFromBookBasisToTaxBasisNetIncomeLossTaxBasis" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="avb_ReconciliationOfIncomeFromBookBasisToTaxBasisOtherAdjustments" name="ReconciliationOfIncomeFromBookBasisToTaxBasisOtherAdjustments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_ReconciliationOfNetOperatingIncomeToNetIncomeAbstract" name="ReconciliationOfNetOperatingIncomeToNetIncomeAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_RedeemableNoncontrollingInterestPolicyTextBlock" name="RedeemableNoncontrollingInterestPolicyTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_RedevelopmentCommunitiesMember" name="RedevelopmentCommunitiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_RentalAndNonRentalMember" name="RentalAndNonRentalMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_RestrictedStockAndRestrictedStockUnitsMember" name="RestrictedStockAndRestrictedStockUnitsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_RestrictedStockConvertedFromPerformanceSharesMember" name="RestrictedStockConvertedFromPerformanceSharesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_RestrictedStockandRestrictedStockConvertedFromPerformanceSharesMember" name="RestrictedStockandRestrictedStockConvertedFromPerformanceSharesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_RetailSquareFeet" name="RetailSquareFeet" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="instant" />
+  <xsd:element id="avb_RetailSquareFeetSold" name="RetailSquareFeetSold" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_RevenueFromAssetsHeldforSaleNotClassifiedAsDiscontinuedOperations" name="RevenueFromAssetsHeldforSaleNotClassifiedAsDiscontinuedOperations" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="avb_SaleOfCommunitiesGrossSalesPrice" name="SaleOfCommunitiesGrossSalesPrice" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="avb_SaleOfRealEstateGrossSalesPrice" name="SaleOfRealEstateGrossSalesPrice" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="avb_SalesAgentCompensationPercentageContinuousEquityProgram" name="SalesAgentCompensationPercentageContinuousEquityProgram" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_SanDiegoCAMember" name="SanDiegoCAMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_SanFranciscoCAMember" name="SanFranciscoCAMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_SanJoseCAMember" name="SanJoseCAMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ScheduleOfDisposalGroupsIncludingDiscontinuedOperationsSummaryOfRealEstateDispositionsTableTextBlock" name="ScheduleOfDisposalGroupsIncludingDiscontinuedOperationsSummaryOfRealEstateDispositionsTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ScheduleOfEquityMethodInvestmentSummarizedBalanceSheetInformationTableTextBlock" name="ScheduleOfEquityMethodInvestmentSummarizedBalanceSheetInformationTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ScheduleOfEquityMethodInvestmentSummarizedIncomeStatementInformationTableTextBlock" name="ScheduleOfEquityMethodInvestmentSummarizedIncomeStatementInformationTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ScheduleOfFutureMinimumLeasePaymentsTableTextBlock" name="ScheduleOfFutureMinimumLeasePaymentsTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ScheduleOfReconciliationOfIncomeFromBookBasisToTaxBasisTableTextBlock" name="ScheduleOfReconciliationOfIncomeFromBookBasisToTaxBasisTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ScheduleofNetOperatingIncomefromRealEstateAssetsSoldorHeldforSaleNotClassifiedasDiscontinuedOperationsTableTextBlock" name="ScheduleofNetOperatingIncomefromRealEstateAssetsSoldorHeldforSaleNotClassifiedasDiscontinuedOperationsTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_SecuredNotesPayableandVariableRateUnsecuredTermLoanMember" name="SecuredNotesPayableandVariableRateUnsecuredTermLoanMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardAgeOfEmployeeAtRetirementPlusYearsOfEmployment" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardAgeOfEmployeeAtRetirementPlusYearsOfEmployment" nillable="true" substitutionGroup="xbrli:item" type="xbrli:durationItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardCompensationMultiplier" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardCompensationMultiplier" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsIncreaseDecreaseInAwardsBasedOnPerformance" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsIncreaseDecreaseInAwardsBasedOnPerformance" nillable="true" substitutionGroup="xbrli:item" type="xbrli:sharesItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsIssuedInPeriodFairValue" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsIssuedInPeriodFairValue" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardExercisePeriodForOptionsHeldUponTerminationWithoutCauseOrRetirement" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardExercisePeriodForOptionsHeldUponTerminationWithoutCauseOrRetirement" nillable="true" substitutionGroup="xbrli:item" type="xbrli:durationItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsAnnualForfeitureRate" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsAnnualForfeitureRate" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsWeightedAverageHistoricalVolatilityRate" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsWeightedAverageHistoricalVolatilityRate" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsWeightedAverageImpliedVolatilityRate" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsWeightedAverageImpliedVolatilityRate" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardMaximumMeasurementPeriod" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardMaximumMeasurementPeriod" nillable="true" substitutionGroup="xbrli:item" type="xbrli:durationItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardNumberOfPurchasePeriod" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardNumberOfPurchasePeriod" nillable="true" substitutionGroup="xbrli:item" type="xbrli:integerItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardPercentageOfStockOptionsShareBasedCompensation" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardPercentageOfStockOptionsShareBasedCompensation" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardRequisitePeriodOfNonCompeteAgreement" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardRequisitePeriodOfNonCompeteAgreement" nillable="true" substitutionGroup="xbrli:item" type="xbrli:durationItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardRequisitePeriodOfWrittenNoticeForRetirement" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardRequisitePeriodOfWrittenNoticeForRetirement" nillable="true" substitutionGroup="xbrli:item" type="xbrli:durationItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardRequisiteRetirementAge" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardRequisiteRetirementAge" nillable="true" substitutionGroup="xbrli:item" type="xbrli:durationItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementByShareBasedPaymentAwardTerminationPeriodFollowingSaleEvent" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardTerminationPeriodFollowingSaleEvent" nillable="true" substitutionGroup="xbrli:item" type="xbrli:durationItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_ShareBasedCompensationArrangementbyShareBasedPaymentAwardAwardRequisiteServicePeriodFullTimeEmployees" name="ShareBasedCompensationArrangementbyShareBasedPaymentAwardAwardRequisiteServicePeriodFullTimeEmployees" nillable="true" substitutionGroup="xbrli:item" type="xbrli:durationItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_SharebasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriodBasedOnFinancialMetrics" name="SharebasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriodBasedOnFinancialMetrics" nillable="true" substitutionGroup="xbrli:item" type="xbrli:sharesItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_SharebasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriodBasedOnTotalShareholderMetrics" name="SharebasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriodBasedOnTotalShareholderMetrics" nillable="true" substitutionGroup="xbrli:item" type="xbrli:sharesItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_SharebasedCompensationArrangementBySharebasedPaymentAwardEquityInstrumentsOtherThanOptionsChangeinAwardsBasedonPerformanceWeightedAverageGrantDateFairValue" name="SharebasedCompensationArrangementBySharebasedPaymentAwardEquityInstrumentsOtherThanOptionsChangeinAwardsBasedonPerformanceWeightedAverageGrantDateFairValue" nillable="true" substitutionGroup="xbrli:item" type="num:perShareItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_SharebasedCompensationArrangementBySharebasedPaymentAwardEquityInstrumentsOtherThanOptionsConvertedToRestrictedStock" name="SharebasedCompensationArrangementBySharebasedPaymentAwardEquityInstrumentsOtherThanOptionsConvertedToRestrictedStock" nillable="true" substitutionGroup="xbrli:item" type="xbrli:sharesItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_SharebasedCompensationArrangementBySharebasedPaymentAwardEquityInstrumentsOtherThanOptionsConvertedToRestrictedStockWeightedAverageGrantDateFairValue" name="SharebasedCompensationArrangementBySharebasedPaymentAwardEquityInstrumentsOtherThanOptionsConvertedToRestrictedStockWeightedAverageGrantDateFairValue" nillable="true" substitutionGroup="xbrli:item" type="num:perShareItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_SharesIssuedWeightedAveragePricePerShare" name="SharesIssuedWeightedAveragePricePerShare" nillable="true" substitutionGroup="xbrli:item" type="num:perShareItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_SouthernCaliforniaMember" name="SouthernCaliforniaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_StockOptionAndIncentivePlan1994Member" name="StockOptionAndIncentivePlan1994Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_StockOptionAndIncentivePlan2009Member" name="StockOptionAndIncentivePlan2009Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_SubsequentEventDispositionsMember" name="SubsequentEventDispositionsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_SudburyMember" name="SudburyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_TRSDisposedCommunitiesMember" name="TRSDisposedCommunitiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_TaxComponentsOfCommonStockDividendsDeclaredAbstract" name="TaxComponentsOfCommonStockDividendsDeclaredAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_TheAlexanderAlexanderLoftsMember" name="TheAlexanderAlexanderLoftsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_TheParkLoggiaMember" name="TheParkLoggiaMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_TheStatesmanMember" name="TheStatesmanMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_TwinbrookStationMember" name="TwinbrookStationMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_USFundMember" name="USFundMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_UnconsolidatedRealEstateEntitiesMember" name="UnconsolidatedRealEstateEntitiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_UnsecuredNotes2.30PercentMember" name="UnsecuredNotes2.30PercentMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_UnsecuredNotes3.30PercentDomain" name="UnsecuredNotes3.30PercentDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="avb_VariableInterestEntityOwnershipInterestByPartner" name="VariableInterestEntityOwnershipInterestByPartner" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_VariableRateMortgageNotesPayableUnsecuredTermLoanAndCreditFacilityMember" name="VariableRateMortgageNotesPayableUnsecuredTermLoanAndCreditFacilityMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_VariableRateUnsecuredTermLoan100MillionMember" name="VariableRateUnsecuredTermLoan100MillionMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_VariableRateUnsecuredTermLoan150MillionMember" name="VariableRateUnsecuredTermLoan150MillionMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_VariableRateUnsecuredTermLoan250MillionMember" name="VariableRateUnsecuredTermLoan250MillionMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_VariableRateUnsecuredTermLoanMember" name="VariableRateUnsecuredTermLoanMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="avb_VicePresidentAndSeniorVicePresidentMember" name="VicePresidentAndSeniorVicePresidentMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+</xsd:schema>

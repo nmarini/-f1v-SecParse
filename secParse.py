@@ -355,60 +355,6 @@ for document_id in filing_documents:
 
 
 ## SCRAPING TABLES function ##
-
-# def scrape_table_dictionary(table_dictionary):
-    
-#     # initalize a new dicitonary that'll house all your results
-#     new_table_dictionary = {}
-    
-#     if len(table_dictionary) != 0:
-
-#         # loop through the dictionary
-#         for table_id in table_dictionary:
-
-#             # grab the table
-#             table_html = table_dictionary[table_id]
-            
-#             pprint(table_html)
-#             # grab all the rows.
-#             table_rows = table_html['table'].find_all('tr')
-            
-#             # parse the table, first loop through the rows, then each element, and then parse each element.
-#             parsed_table = [
-#                 [element.get_text(strip=True) for element in row.find_all('td')]
-#                 for row in table_rows
-#             ]
-            
-#             # keep the original just to be safe.
-#             new_table_dictionary[table_id]['original_table'] = table_html
-            
-#             # add the new parsed table.
-#             new_table_dictionary[table_id]['parsed_table'] = parsed_table
-            
-#             # # here some additional steps you can take to clean up the data - Removing '$'.
-#             # parsed_table_cleaned = [
-#             #     [element for element in row if element != '$']
-#             #     for row in parsed_table
-#             # ]
-            
-#             # # here some additional steps you can take to clean up the data - Removing Blanks.
-#             # parsed_table_cleaned = [
-#             #     [element for element in row if element != None]
-#             #     for row in parsed_table_cleaned.
-#             # ]
-         
-#     else:
-        
-#         # if there are no tables then just have the id equal NONE
-#         new_table_dictionary[1]['original_table'] = None
-#         new_table_dictionary[1]['parsed_table'] = None
-        
-#     return new_table_dictionary
-
-
-
-
-
 def scrape_table_dictionary(table_dictionary):
     
     # initalize a new dicitonary that'll house all your results
@@ -421,13 +367,9 @@ def scrape_table_dictionary(table_dictionary):
 
             # grab the table
             table_html = table_dictionary[table_id]
-            
 
             table_details = []
             table_text = []
-            
-            # for table in table_html.values():
-            #     table_rows.append(table.find_all('tr'))
 
             for table in table_html.values():
                 for row in table.find_all('tr'):
@@ -435,25 +377,16 @@ def scrape_table_dictionary(table_dictionary):
                         for td in col: 
                             table_details.append(td)
             
-
-            
             for detail in table_details:
-                # text = detail.replace(u"\u2610", " ")
                 text = unicodedata.normalize('NFKD', detail.get_text()).replace(u"\u2610", " ")
                 if text != ' ' and text != '':
                     table_text.append(text.encode("utf-8"))
-
-            # for row in table_rows:
-            #     table_details.append(row.td)
-
-            
+         
             # # parse the table, first loop through the rows, then each element, and then parse each element.
             # parsed_table = [
             #     [element.get_text(strip=True) for element in row.find_all('td')]
             #     for row in table_rows
             # ]
-
-          
             
             # keep the original just to be safe.
             # new_table_dictionary[table_id]['original_table'] = table_html
@@ -478,7 +411,7 @@ def scrape_table_dictionary(table_dictionary):
         
         # if there are no tables then just have the id equal NONE
         # new_table_dictionary[1]['original_table'] = None
-        new_table_dictionary[1] = None
+        new_table_dictionary['none'] = None
         
         
     return new_table_dictionary
@@ -510,4 +443,5 @@ def search_for_centered_headers(tag):
 ## UNCOMMENT TO VIEW TABLES 
 # filing_documents[document_id]['table_search']
 
-print(scrape_table_dictionary(filing_documents['10-K']['table_search']))
+## UNCOMMENT TO VIEW PARSED TABLES 
+# pprint(scrape_table_dictionary(filing_documents['10-K']['table_search']))
