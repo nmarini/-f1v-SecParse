@@ -4,14 +4,22 @@ import pathlib
 import collections
 import xml.etree.ElementTree as ET
 
-# Define Current Working Directory:
+# # Define Current Working Directory:
 sec_directory = pathlib.Path.cwd().joinpath("sec10-K")
+# sec_directory = pathlib.Path.cwd().joinpath("NRP10-K")
 
-# Define the file path.
+# # Define the file path.
 file_htm = sec_directory.joinpath('a201910-k.htm').resolve()
 file_cal = sec_directory.joinpath('avb-20191231_cal.xml').resolve()
-file_lab = sec_directory.joinpath('avb-20191231_def.xml').resolve()
+file_lab = sec_directory.joinpath('avb-20191231_lab.xml').resolve()
 file_def = sec_directory.joinpath('avb-20191231_def.xml').resolve()
+
+# file_htm = sec_directory.joinpath('nnn-20191231x10k.htm').resolve()
+# file_cal = sec_directory.joinpath('nnn-20191231_cal.xml').resolve()
+# file_lab = sec_directory.joinpath('nnn-20191231_lab.xml').resolve()
+# file_def = sec_directory.joinpath('avb-20191231_def.xml').resolve()
+
+
 
 # Initalize storage units, one will be the master list, one will store all the values, and one will store all GAAP info.
 storage_list = []
@@ -85,18 +93,10 @@ for file in files_list:
                         # grab the value.
                         dict_storage[key] = child_element.attrib[key]
 
-                    
-
                 # At this stage I need to create my master list of IDs which is very important to program. I only want unique values.
                 # I'm still experimenting with this one but I find `Label` XML file provides the best results.
+                if element_type_label == 'label_label':
 
-                # IDs that work for the if statement below: 
-                # calculation_loc
-                # definition_loc
-
-                # not sure if I should use both definition_loc and calucation_loc or only one 
-                if element_type_label == 'calculation_loc':
-                    
                     # Grab the Old Label ID for example, `lab_us-gaap_AllocatedShareBasedCompensationExpense_E5D37E400FB5193199CFCB477063C5EB`
                     key_store = dict_storage['label']
 
@@ -107,7 +107,7 @@ for file in files_list:
                     label_split = master_key.split('_')
 
                     # Create the GAAP ID, now it's this: 'us-gaap:AllocatedShareBasedCompensationExpense'
-                    gaap_id = label_split[1] + ':' + label_split[2]
+                    gaap_id = label_split[0] + ':' + label_split[1]
 
                     # One Dictionary contains only the values from the XML Files.
                     storage_values[master_key] = {} 
@@ -124,4 +124,3 @@ for file in files_list:
 
                 # add to dictionary.
                 storage_list.append([file.namespace_label, dict_storage])
-                pprint.pprint(storage_list)

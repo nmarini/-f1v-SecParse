@@ -45,7 +45,8 @@ def restore_windows_1252_characters(restore_string):
 
 # grab the document 
 new_html_text = r"https://www.sec.gov/Archives/edgar/data/915912/000091591220000004/0000915912-20-000004.txt"
-# new_html_text = r"https://www.sec.gov/Archives/edgar/data/1166036/000110465904027382/0001104659-04-027382.txt"
+# new_html_text = r"https://www.sec.gov/Archives/edgar/data/49600/000004960020000030/0000049600-20-000030.txt"
+# new_html_text = r"https://www.sec.gov/Archives/edgar/data/751364/000075136420000021/0000751364-20-000021.txt"
 
 #grab response 
 response = get_link(new_html_text)
@@ -59,7 +60,8 @@ master_filings_dict = {}
 
 #define a unique key for each filing 
 accession_number = '0000915912-20-000004'
-# accession_number = '0001104659-04-027382'
+# accession_number = '0000049600-20-000030'
+# accession_number = '0000751364-20-000021'
 
 #add the key to the dictionary and add a new level
 master_filings_dict[accession_number] = {} 
@@ -444,4 +446,4 @@ def search_for_centered_headers(tag):
 # filing_documents[document_id]['table_search']
 
 ## UNCOMMENT TO VIEW PARSED TABLES 
-# pprint(scrape_table_dictionary(filing_documents['10-K']['table_search']))
+pprint(scrape_table_dictionary(filing_documents['10-K']['table_search']))
